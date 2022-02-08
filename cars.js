@@ -75,6 +75,7 @@ const update = () => {
       });
   }
 
+  
   //Delete a car from the DB
   const deleteCar = () => {
     axios.delete(`http://localhost:8080/car/delete/${carID.value}`)
@@ -87,6 +88,8 @@ const update = () => {
   }
 
 btnFetchAll.onclick = () => fetch(fetchUrl);
-btnAddCar.onclick = () => create();
-btnDelCar.onclick = () => deleteCar();
-btnUpdCar.onclick = () => update();
+//btnAddCar.onclick = () => create();
+btnAddCar.addEventListener('click', () => create(`http://localhost:8080/car/create/`));
+btnDelCar.addEventListener('click', () => deleteCar(`http://localhost:8080/car/delete/${carID.value}`));
+//btnUpdCar.onclick = () => update();
+btnUpdCar.addEventListener('click', () => update(`http://localhost:8080/car/update/${carID.value}`));
