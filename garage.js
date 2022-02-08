@@ -68,4 +68,5 @@ const deleteGarage = () => {
 btnReadGarage.addEventListener('click', () => fetch(`http://localhost:8080/garage/read`));
 btnAddGarage.addEventListener('click', () => create(`http://localhost:8080/garage/create`));
 btnUpdGarage.addEventListener('click', () => update(`http://localhost:8080/garage/update/${updateGarageID.value}`));
+
 btnDelGarage.addEventListener('click', () => deleteGarage(`http://localhost:8080/garage/delete/${delGarageID.value}`));
