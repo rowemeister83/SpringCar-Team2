@@ -30,6 +30,7 @@ const writeItem = item => {
       }).catch((err) => {
         console.log(err);
       });
+
       
   }
   //const identifyGarage = () => {
