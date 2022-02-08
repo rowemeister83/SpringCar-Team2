@@ -32,7 +32,6 @@ const writeItem = item => {
       });
       
   }
-
   //const identifyGarage = () => {
   
     //DOM.garagesResults.innerHTML = ``;
@@ -57,6 +56,7 @@ const writeItem = item => {
   }
   
   const deleteGarage = () => {
+    btnDelCar.onclick = () => output.innerHTML = (`http://localhost:8080/garageDelete/${DOM.deleteGarageID.value}`)
     axios.delete(`http://localhost:8080/garage/delete/${DOM.deleteGarageID.value}`)
       .then((response) => {
         console.log(response);
