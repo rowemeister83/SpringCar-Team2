@@ -3,7 +3,7 @@
 import * as DOM from './dom.js';
 
 DOM.readGarageButton.onclick = () => getGarage();
-DOM.getGarageIDButton.onclick = () => identifyGarage();
+//DOM.getGarageIDButton.onclick = () => identifyGarage();
 DOM.newGarageButton.onclick = () => createGarage();
 DOM.updateGarageButton.onclick = () => updateGarage();
 DOM.deleteGarageButton.onclick = () => deleteGarage();
@@ -33,18 +33,18 @@ const writeItem = item => {
       
   }
 
-  const identifyGarage = () => {
+  //const identifyGarage = () => {
   
-    DOM.garagesResults.innerHTML = ``;
+    //DOM.garagesResults.innerHTML = ``;
   
-    axios.get(`http://localhost:8080/garage/read/${DOM.getGarageID.value}`)
-      .then((response) => {
-        console.log(response);
-        DOM.garageOutput.innerHTML = `${JSON.stringify(response.data)}`;
-      }).catch((err) => {
-        console.log(err);
-      });
-  }
+   // axios.get(`http://localhost:8080/garage/read/${DOM.getGarageID.value}`)
+     //.then((response) => {
+       // console.log(response);
+       // DOM.garageOutput.innerHTML = `${JSON.stringify(response.data)}`;
+     // }).catch((err) => {
+       // console.log(err);
+     // });
+ // }
   
   const createGarage = () => {
     axios.post(`http://localhost:8080/garage/create`, {name : DOM.garageName.value})
@@ -60,7 +60,7 @@ const writeItem = item => {
     axios.delete(`http://localhost:8080/garage/delete/${DOM.deleteGarageID.value}`)
       .then((response) => {
         console.log(response);
-        DOM.DelGarageID.value = "";
+        DOM.deleteGarageID.value = "";
         getGarage();
       }).catch((err) => {
         console.log(err);
@@ -72,7 +72,7 @@ const writeItem = item => {
       .then((response) => {
         console.log(response);
         getGarage();
-        DOM.updateName.value = "";
+        DOM.updateGarageName.value = "";
         DOM.updateGarageID.value = "";
       }).catch((err) => {
         console.log(err);
