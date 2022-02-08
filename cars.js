@@ -21,6 +21,7 @@ const fetch = (URL) => {
         .then((response) => {
             output.innerHTML = JSON.stringify(response.data);
         }).catch((err) => {
+            output.innerHTML = 'Error Occurred Please Try Again.';
             console.log(err);
         })
 }
@@ -38,15 +39,14 @@ const create = () => {
             garage: {
               id: carGarageID.value,
               name: carGarageName.value,
-              cars: [
-                null
-              ]
+              cars: null
             }
           }
     )
         .then((response) => {
             output.innerHTML = JSON.stringify(response.data);
         }).catch((err) => {
+            output.innerHTML = 'Error Occurred Please Try Again.';
             console.log(err);
         })
 }
@@ -63,14 +63,14 @@ const update = () => {
         garage: {
           id: carGarageID.value,
           name: carGarageName.value,
-          cars: [
-            null
-          ]
+          cars: null
         }
     })
       .then((response) => {
+        output.innerHTML = JSON.stringify(response.data);
         console.log(response);
       }).catch((err) => {
+        output.innerHTML = 'Error Occurred Please Try Again.';
         console.log(err);
       });
   }
@@ -83,13 +83,12 @@ const update = () => {
         console.log(response);
         carID.value = "";
       }).catch((err) => {
+        output.innerHTML = 'Error Occurred Please Try Again.';
         console.log(err);
       });
   }
 
 btnFetchAll.onclick = () => fetch(fetchUrl);
-//btnAddCar.onclick = () => create();
 btnAddCar.addEventListener('click', () => create(`http://localhost:8080/car/create/`));
 btnDelCar.addEventListener('click', () => deleteCar(`http://localhost:8080/car/delete/${carID.value}`));
-//btnUpdCar.onclick = () => update();
 btnUpdCar.addEventListener('click', () => update(`http://localhost:8080/car/update/${carID.value}`));
