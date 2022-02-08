@@ -15,6 +15,21 @@ const writeItem = item => {
     DOM.garagesResults.appendChild(child);
   }
 
+
+
+
+  //Identify all cars - list cars
+fetchUrl = `http://localhost:8080/garage/read`
+const getGarage = (URL) => {
+    axios.get(URL)
+        .then((response) => {
+            DOM.garagesResults.innerHTML = JSON.stringify(response.data);
+        }).catch((err) => {
+            console.log(err);
+        })
+}
+
+//original
   const getGarage = () => {
     DOM.garagesResults.innerHTML = ``;
   
