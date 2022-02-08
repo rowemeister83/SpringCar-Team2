@@ -53,8 +53,9 @@ header .container a:hover{
 
 }
 .container1{
-    max-width: 350px;
+    width: 80%;
     margin:auto;
+    text-align: center;
 }
 .containergarage{
     margin-top: 5%;
