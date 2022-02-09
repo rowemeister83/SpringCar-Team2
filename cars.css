@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+body {
+background-color:pink;
+}
+
+h1 {
+color:blue;
+font-size: 50px;
+}
+
+a {
+color: black;
+}
+
+input {
+color: black;
+font-size: large;
+line-height: 1.8;
+}
+
+car id {
+colour:yellow;
+}
+
+table {
+width: 100%;
+border: 1px solid black;
+}
+
