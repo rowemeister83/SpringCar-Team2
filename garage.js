@@ -18,7 +18,7 @@ const fetch = (URL) => {
             console.log(err);
         })
 }
-
+ 
 //creates a new garage
 const create = () => {
     axios.post(`http://localhost:8080/garage/create`, 
