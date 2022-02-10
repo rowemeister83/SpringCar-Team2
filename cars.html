@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" 
+    href="cars.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="./cars.css">
+    <title>Team 2 | Cars</title>
+    
+</head>
+<body>
+    <div class="topnav">
+    <a href="carindex.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="garages.html">Garages</a>
+    </div>
+    <div>
+        <h1>Identify all Cars</h1>
+        <button type="button" id=btnFetchAll>View All Cars</button>
+    </div>
+    
+    <div>
+        <h1>Add a new car</h1>
+        <input type="number" id="input_carID" placeholder="Car ID" style="width: 80px">
+        <input type="text" id="input_name" placeholder="Name" style="width: 130px">
+        <input type="text" id="input_colour" placeholder="Colour" style="width: 130px">
+        <input type="text" id="input_make" placeholder="Make" style="width: 130px">
+        <input type="text" id="input_model" placeholder="Model" style="width: 130px">
+        <input type="number" id="input_doors" placeholder="Doors" style="width: 130px">
+        <br>
+        <input type="number" id="input_garageID" placeholder="Garage ID" style="width: 100px">
+        <input type="text" id="input_garageName" placeholder="Garage Name" style="width: 130px">
+        <br>
+        <button type="button" id="btnAddCar">Add Car</button>
+        <button type="button" id="btnUpdCar">Update Car</button>
+        <button type="button" id="btnDelCar">Delete Car</button>
+    </div>
+    
+
+    <div id="output"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./cars.js"></script>
+</body>
+</html>
